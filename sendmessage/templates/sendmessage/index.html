@@ -1,0 +1,16 @@
+<h1>Wavy</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'send' %}" method="POST">
+  {% csrf_token %}
+  <input type="text" name="number" value="" placeholder="Enter phone number">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_72uGQAj3vOxzWdY6YkEDr24I"
+    data-amount="100"
+    data-name="Yeezy Yeezy What's Good?"
+    data-description="1 call"
+    data-locale="auto">
+  </script>
+</form>
