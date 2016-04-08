@@ -1,1 +1,1 @@
-web: unicorn wavy.wsgi
+web: gunicorn wavy.wsgi
