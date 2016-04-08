@@ -1,3 +1,4 @@
 Django==1.9.5
 django-twilio==0.8.0
 stripe==1.32.0
+gunicorn>=19.4.5
