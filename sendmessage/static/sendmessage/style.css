@@ -1,0 +1,19 @@
+div {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+}
+
+script {
+  margin:15px;
+  display:block;
+}
+
+#head {
+  margin-top: 10%;
+}
