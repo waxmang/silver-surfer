@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os, stripe, sys
-import os.path
 
 reload(sys)
 sys.setdefaultencoding('utf8')

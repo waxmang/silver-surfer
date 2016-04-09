@@ -20,3 +20,6 @@ urlpatterns = [
     url(r'^', include('sendmessage.urls')),
     url(r'^admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+   urlpatterns += staticfiles_urlpatterns()
