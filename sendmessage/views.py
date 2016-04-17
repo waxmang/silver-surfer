@@ -41,4 +41,4 @@ def send(request):
             print call.sid
         except Exception, e:
             print str(e)
-        return HttpResponse(phone_number)
+        return render(request, 'sendmessage/done.html')

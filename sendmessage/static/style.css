@@ -1,10 +1,30 @@
+body {
+  background: url("http://i.imgur.com/db8lObZ.png") right bottom;
+}
+
 div {
   text-align: center;
   width: 100%;
   margin: auto;
 }
 
+h1 {
+  color: #e5e5e5;
+  font-size: 5em;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0px;
+}
+
+h3 {
+  color: #e5e5e5;
+  font-size: 1.2em;
+  font-family: 'Lora', serif;
+}
+
 input {
+  padding-left: 8px;
+  border: 0px;
+  border-radius: 6px;
   width: 200px;
   height: 30px;
 }
@@ -14,6 +34,13 @@ script {
   display:block;
 }
 
+a {
+  text-decoration: none;
+  color: #458abe;
+  font-family: 'Roboto', sans-serif;
+}
+
 #head {
   margin-top: 10%;
+  margin-bottom: 3%;
 }

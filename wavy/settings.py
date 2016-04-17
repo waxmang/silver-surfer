@@ -39,7 +39,6 @@ TWILIO_AUTH_TOKEN = os.environ['TWILIO_TOKEN'] # variables later
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-TWILIO_TOKEN = False
 
 ALLOWED_HOSTS = []
 
