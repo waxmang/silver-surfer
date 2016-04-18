@@ -4,8 +4,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -18,10 +18,20 @@
     </div>
 
     <div id="form">
-      <form action="/send/" method="POST">
-        <input type='hidden' name='csrfmiddlewaretoken' value='XGHUMsy7hGE6QoUW89byQyDooscexw9t' />
-        <input type="text" name="number" value="" placeholder="Enter phone number">
-        <input type="submit" value="The Wave Is Here" id="submit">
+      <form action="{% url 'send' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="number1" value="" placeholder="Enter phone number">
+        <input type="text" name="number2" value="" placeholder="Enter phone number">
+        <input type="text" name="number3" value="" placeholder="Enter phone number">
+
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_live_UCwx7gEyKohrYO8kPtCZ7zmL"
+          data-amount="100"
+          data-name="Yeezy Yeezy What's Good?"
+          data-description="Up to 3 calls"
+          data-locale="auto">
+        </script>
       </form>
     </div>
 
