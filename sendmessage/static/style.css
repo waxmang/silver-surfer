@@ -36,6 +36,13 @@ h3 {
   margin-top: 20%;
 }
 
+#error {
+  margin: auto;
+  color: #e52121;
+  font-size: 1em;
+  font-family: 'Lora', serif;
+}
+
 script {
   margin:15px;
   display:block;

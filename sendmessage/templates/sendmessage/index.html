@@ -1,4 +1,3 @@
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 {% load static from staticfiles %}
 
 <html>
@@ -12,7 +11,10 @@
     <title>WAVY</title>
   </head>
   <body>
+
     <div id="head">
+      {% if error_message %}<p id="error"><strong>{{ error_message }}</strong></p>{% endif %}
+
       <h1>Wavy</h1>
       <h3>Give the gift of loopiness.</h3>
     </div>
