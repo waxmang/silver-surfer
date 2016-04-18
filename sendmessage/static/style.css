@@ -24,12 +24,16 @@ h3 {
   font-family: 'Lora', serif;
 }
 
-input {
+#number, #submit {
   padding-left: 8px;
   border: 0px;
   border-radius: 6px;
   width: 200px;
   height: 30px;
+}
+
+#donate {
+  margin-top: 20%;
 }
 
 script {
@@ -41,6 +45,12 @@ a {
   text-decoration: none;
   color: #458abe;
   font-family: 'Roboto', sans-serif;
+}
+
+#beg {
+  color: #e5e5e5;
+  font-size: .8em;
+  font-family: 'Lora', serif;
 }
 
 #submit {
