@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django_twilio.decorators import twilio_view
 from django.conf import settings
@@ -18,22 +18,9 @@ def send(request):
     phone_number = request.POST['number']
     if (len(phone_number)<5):
         return render(request, 'sendmessage/index.html', {
-            'error_message': 'You didn\'t enter a phone number.',
+            'error_message': 'You entered an invalid phone number.',
         })
     else:
-        #token = request.POST['stripeToken']
-        # Create the charge on Stripe's servers - this will charge the user's card
-        #try:
-        #  charge = stripe.Charge.create(
-        #     amount=100, # amount in cents, again
-        #      currency="usd",
-        #      source=token,
-        #      description="Just keeping it loopy"
-        # )
-        #except stripe.error.CardError, e:
-          # The card has been declined
-        #  pass
-
         try:
             call = client.calls.create(to=phone_number,
                 from_="+15103533372",
@@ -42,3 +29,17 @@ def send(request):
         except Exception, e:
             print str(e)
         return render(request, 'sendmessage/done.html')
+
+def donate(request):
+    token = request.POST['stripeToken']
+     # Create the charge on Stripe's servers - this will charge the user's card
+    try:
+      charge = stripe.Charge.create(
+        amount=500, # amount in cents, again
+        currency="usd",
+        source=token,
+        description="Just keeping it loopy"
+    )
+    except stripe.error.CardError, e:
+      # The card has been declined
+        pass
