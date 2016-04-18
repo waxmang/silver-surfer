@@ -24,6 +24,7 @@
       </form>
 
       <form action="{% url 'donate' %}" method="post">
+        {% csrf_token %}
       <script
          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
          data-key="pk_live_UCwx7gEyKohrYO8kPtCZ7zmL"
@@ -33,7 +34,7 @@
          data-locale="auto">
        </script>
       </form>
-      
+
       <p id="beg">
         I REALLY WANT TO KEEP THIS ONLINE CAUSE I LOVE YOU GUYS BUT I WILL HAVE TO TAKE IT DOWN
         SOON IF NOBODY DONATES
