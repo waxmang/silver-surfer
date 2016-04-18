@@ -23,6 +23,7 @@
       <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
       </form>
 
+      <form action="{% url 'donate' %}" method="post">
       <script
          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
          data-key="pk_live_UCwx7gEyKohrYO8kPtCZ7zmL"
@@ -31,6 +32,8 @@
          data-description="Much thanks fam"
          data-locale="auto">
        </script>
+      </form>
+
       <p id="beg">Donations appreciated! It's the only way I can keep this up!</p>
     </div>
   </body>
