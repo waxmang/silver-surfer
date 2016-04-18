@@ -43,3 +43,5 @@ def donate(request):
     except stripe.error.CardError, e:
       # The card has been declined
         pass
+
+    return render(request, 'sendmessage/done.html')
