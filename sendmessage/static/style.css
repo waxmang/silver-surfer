@@ -1,5 +1,8 @@
 body {
   background: url("http://i.imgur.com/db8lObZ.png") right bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
 }
 
 div {
@@ -38,6 +41,17 @@ a {
   text-decoration: none;
   color: #458abe;
   font-family: 'Roboto', sans-serif;
+}
+
+#submit {
+  background: -webkit-linear-gradient(top, #7db9e8 0%,#399ace 0%,#2989d8 33%,#1e5799 100%);  margin: auto;
+  margin-top: 12px;
+  display: block;
+  width: 140px;
+  height: 35px;
+  color: white;
+  font-size: .8em;
+  font-weight: bold;
 }
 
 #head {

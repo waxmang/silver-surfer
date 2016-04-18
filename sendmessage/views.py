@@ -21,18 +21,18 @@ def send(request):
             'error_message': 'You didn\'t enter a phone number.',
         })
     else:
-        token = request.POST['stripeToken']
+        #token = request.POST['stripeToken']
         # Create the charge on Stripe's servers - this will charge the user's card
-        try:
-          charge = stripe.Charge.create(
-              amount=100, # amount in cents, again
-              currency="usd",
-              source=token,
-              description="Just keeping it loopy"
-          )
-        except stripe.error.CardError, e:
+        #try:
+        #  charge = stripe.Charge.create(
+        #     amount=100, # amount in cents, again
+        #      currency="usd",
+        #      source=token,
+        #      description="Just keeping it loopy"
+        # )
+        #except stripe.error.CardError, e:
           # The card has been declined
-          pass
+        #  pass
 
         try:
             call = client.calls.create(to=phone_number,
