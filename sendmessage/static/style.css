@@ -60,6 +60,12 @@ a {
   font-family: 'Lora', serif;
 }
 
+p {
+  color: #e5e5e5;
+  font-size: 1em;
+  font-family: 'Lora', serif;
+}
+
 #submit {
   background: -webkit-linear-gradient(top, #7db9e8 0%,#399ace 0%,#2989d8 33%,#1e5799 100%);  margin: auto;
   margin-top: 12px;

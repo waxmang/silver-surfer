@@ -20,6 +20,7 @@
     </div>
 
     <div id="form">
+      <!--
       <form action="{% url 'send' %}" method="POST">
         {% csrf_token %}
         <input type="text" name="number" value="" placeholder="Enter phone number" id="number">
@@ -29,6 +30,34 @@
           Only works in US/Canada ATM, should be working internationally by tomorrow.
         </p>
       </form>
+    -->
+    <p>
+      Sorry guys, I've lost over $200 so far and can't afford to keep this going anymore. :(
+    </p>
+    <p>
+      If you want to help me bring the wave back feel free to donate.
+    </p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donate">
+      {% csrf_token %}
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+    ">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <form action="{% url 'donate' %}" method="post">
+      {% csrf_token %}
+    <script
+       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+       data-key="pk_live_UCwx7gEyKohrYO8kPtCZ7zmL"
+       data-amount="500"
+       data-name="Yeezy Yeezy What's Good?"
+       data-description="Much thanks fam"
+       data-locale="auto">
+     </script>
+    </form>
 
     </div>
 

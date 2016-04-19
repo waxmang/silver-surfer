@@ -16,7 +16,7 @@ def index(request):
 
 def send(request):
     phone_number = request.POST['number']
-    if (len(phone_number)<5):
+    if (len(phone_number) > 0):
         return render(request, 'sendmessage/index.html', {
             'error_message': 'You entered an invalid phone number.',
         })
