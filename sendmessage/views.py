@@ -21,6 +21,7 @@ def send(request):
             'error_message': 'You entered an invalid phone number.',
         })
     else:
+        '''
         try:
             call = client.calls.create(to=phone_number,
                 from_="+15103533372",
@@ -28,6 +29,7 @@ def send(request):
             print call.sid
         except Exception, e:
             print str(e)
+        '''
         return render(request, 'sendmessage/done.html')
 
 def donate(request):
