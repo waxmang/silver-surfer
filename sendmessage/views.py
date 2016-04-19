@@ -21,13 +21,13 @@ def send(request):
             'error_message': 'You entered an invalid phone number.',
         })
     else:
-        #try:
-            #call = client.calls.create(to=phone_number,
-            #    from_="+15103533372",
-            #    url="http://twimlbin.com/external/5efadf9718cccc0aebb0ea18dd2ad717")
-            #print call.sid
-        #except Exception, e:
-            #print str(e)
+        try:
+            call = client.calls.create(to=phone_number,
+                from_="+15103533372",
+                url="http://twimlbin.com/external/5efadf9718cccc0aebb0ea18dd2ad717")
+            print call.sid
+        except Exception, e:
+            print str(e)
         return render(request, 'sendmessage/done.html')
 
 def donate(request):
