@@ -44,4 +44,5 @@ def donate(request):
       # The card has been declined
         pass
 
-    return render(request, 'sendmessage/done.html')
+    #return render(request, 'sendmessage/done.html')
+    return render(request, 'sendmessage/index.html')
